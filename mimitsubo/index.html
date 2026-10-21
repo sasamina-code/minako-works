@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<title>耳つぼカードツール｜Minako Works</title>
+<meta name="description" content="サロンでの雑談から生まれた、施術後にLINEで送れる耳つぼカードツール。">
+<style>
+:root{
+  --bg:#f3eee7; --card:#fffdf8; --ink:#2b2824; --muted:#6b645c; --line:#e3dccf;
+  --green:#d9e7de; --green-d:#4f8170; --pink:#efd8d3; --accent:#b2493b;
+  --font-serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --font-sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#1f1d1a; --card:#2a2723; --ink:#f0ebe3; --muted:#b9b0a4; --line:#433e37;
+        --green:#2f4239; --green-d:#8fc1ae; --pink:#4a3531; --accent:#e58a7c}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.85;font-size:1rem}
+.page{max-width:980px;margin:0 auto;padding:24px 16px 64px}
+h1,h2,h3{font-family:var(--font-serif);font-weight:700;margin:0;line-height:1.5}
+p{margin:0 0 .8em}
+a{color:inherit}
+.hero{background:linear-gradient(120deg,var(--green) 0%,var(--pink) 100%);border-radius:20px;padding:22px 20px 20px}
+.hero .hrow{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+.hero .logo{flex:none;width:72px;height:72px;background:#fbf9f1;border-radius:50%;padding:9px 9px 7px;object-fit:contain;box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.hero .kicker{color:var(--muted);font-size:.75rem;letter-spacing:.2em}
+.hero h1{font-size:clamp(2rem,9vw,3.5rem);letter-spacing:.03em;margin:2px 0 0;line-height:1.15;white-space:nowrap}
+.hero h1 .works{font-weight:500;color:var(--accent)}
+.hero .catch{font-family:var(--font-serif);font-size:clamp(1rem,3.8vw,1.3125rem);margin:0 0 8px}
+.hero .who{color:var(--muted);margin:0;font-size:.875rem;line-height:1.8}
+@media (min-width:700px){.hero{padding:30px 34px 28px}.hero .hrow{gap:26px;margin-bottom:16px}.hero .logo{width:120px;height:120px;padding:16px 16px 12px}}
+.sec{margin-top:36px}
+.sec>h2{font-size:1.375rem;margin-bottom:6px}
+.sec>.lead{color:var(--muted);font-size:.9375rem;margin-bottom:16px}
+.tag{display:inline-block;border-radius:999px;padding:0 12px;font-size:.75rem;font-weight:700;color:#fff;background:var(--accent);margin-bottom:8px}
+.tag.g{background:var(--green-d);color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{font-size:1.1875rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.9375rem}
+.card .more{display:inline-block;margin-top:6px;padding:8px 18px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:.9375rem}
+.card .more:focus-visible,.dl:focus-visible{outline:3px solid var(--green-d);outline-offset:2px}
+ul.dots{margin:8px 0 0;padding:0;list-style:none}
+ul.dots li{position:relative;padding-left:1.3em;margin:6px 0;font-size:.9375rem}
+ul.dots li::before{content:"";position:absolute;left:.25em;top:.8em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.shots{display:grid;gap:14px;margin-top:16px}
+.shots figure{margin:0}
+.shots img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+.shots figcaption{font-size:.8125rem;color:var(--muted);margin-top:6px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:14px 0 4px;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;background:var(--green);border-radius:14px;padding:14px 14px 12px}
+.steps li:nth-child(even){background:var(--pink)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--bg);font-weight:700;font-size:.8125rem;margin-bottom:6px}
+.steps b{display:block;font-family:var(--font-serif)}
+.steps span{font-size:.875rem;color:var(--muted)}
+.note{background:var(--green);border-radius:12px;padding:12px 16px;font-size:.9375rem;margin-top:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.mini h3{font-size:1rem;margin-bottom:2px}
+.mini p{margin:0;font-size:.875rem;color:var(--muted)}
+.dl{display:inline-block;margin-top:10px;font-size:.875rem;color:var(--muted)}
+
+/* 子育てレポート ビジュアル */
+.feature{padding:0;overflow:hidden}
+.feature .top{padding:26px 22px 20px;background:linear-gradient(120deg,var(--green),var(--pink))}
+.feature .top h3{font-size:clamp(1.375rem,5vw,2rem);line-height:1.45;margin:4px 0 6px}
+.feature .top p{color:var(--ink);opacity:.8;margin:0;font-size:.9375rem}
+.flowrow{display:flex;flex-wrap:wrap;gap:8px 4px;align-items:center;margin-top:16px}
+.flowrow .n{background:var(--card);border-radius:999px;padding:5px 14px;font-size:.8125rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.flowrow .ar{color:var(--accent);font-weight:700;padding:0 2px}
+.feature .mid{display:grid;gap:22px;padding:24px 22px;align-items:start}
+.phone{justify-self:center;width:min(300px,100%);background:var(--card);border:2px solid var(--ink);border-radius:30px;padding:14px 12px 16px;box-shadow:0 14px 30px rgba(0,0,0,.14);position:relative}
+.phone::before{content:"";display:block;width:70px;height:6px;border-radius:99px;background:var(--line);margin:0 auto 10px}
+.phone .ph{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--font-serif);font-weight:700;font-size:.9375rem;margin-bottom:8px}
+.phone .ph small{font-family:var(--font-sans);font-weight:400;color:var(--muted);font-size:.6875rem}
+.blk{border-radius:12px;padding:8px 10px 9px;margin-bottom:7px;border-left:4px solid var(--accent);background:var(--bg)}
+.blk.g{border-left-color:var(--green-d)}
+.blk b{display:block;font-size:.75rem;color:var(--accent);margin-bottom:1px}
+.blk.g b{color:var(--green-d)}
+.blk span{display:block;font-size:.75rem;line-height:1.6;color:var(--ink)}
+.mini-bars{margin-top:8px;padding:8px 10px;border:1px dashed var(--line);border-radius:12px;font-size:.6875rem}
+.mini-bars div{display:grid;grid-template-columns:4.4em 1fr 1.8em;gap:6px;align-items:center;margin:3px 0}
+.mini-bars i{display:block;height:7px;border-radius:99px;background:var(--line);position:relative;overflow:hidden}
+.mini-bars i::after{content:"";position:absolute;inset:0;width:var(--w);border-radius:99px;background:var(--green-d)}
+.mini-bars .s i::after{background:var(--accent)}
+.sample-note{text-align:center;font-size:.6875rem;color:var(--muted);margin-top:6px}
+.pts{display:grid;gap:12px}
+.pt{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;background:var(--bg);border-radius:14px;padding:12px 14px}
+.pt .ic{width:44px;height:44px;border-radius:12px;background:var(--green);display:grid;place-items:center;font-family:var(--font-serif);font-weight:700;font-size:1.125rem;color:var(--ink)}
+.pt:nth-child(even) .ic{background:var(--pink)}
+.pt h4{margin:0 0 2px;font-family:var(--font-serif);font-size:1rem}
+.pt p{margin:0;font-size:.875rem;color:var(--muted)}
+.feature .bot{padding:0 22px 24px;display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center}
+.feature .bot .cap{font-size:.8125rem;color:var(--muted)}
+@media (min-width:760px){.feature .mid{grid-template-columns:320px 1fr;gap:34px;padding:30px 30px}.feature .top{padding:34px 30px 24px}.feature .bot{padding:0 30px 30px}}
+
+/* 体験レポート */
+.card.rcard{padding:0;overflow:hidden;margin-bottom:16px}
+.rcover{position:relative;display:block;color:#fff;text-decoration:none;background:#101410}
+.rcover img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;filter:brightness(.78)}
+.rcover .rt{position:absolute;left:0;right:0;bottom:0;padding:48px 22px 20px;background:linear-gradient(to top,rgba(8,12,9,.82),rgba(8,12,9,0))}
+.rcover .k{font-size:.75rem;letter-spacing:.28em;opacity:.92}
+.rcover h3{font-size:clamp(1.375rem,5.4vw,2rem);margin:4px 0 2px;line-height:1.4;color:#fff}
+.rcover .s{font-size:.9375rem;opacity:.95}
+.rbody{padding:20px 22px 24px}
+.rbody p{color:var(--muted);font-size:.9375rem}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 4px}
+.strip img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:10px}
+.rows{display:grid;gap:10px;margin:14px 0 4px}
+.rows .r{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:baseline;font-size:.875rem;border-top:1px dashed var(--line);padding-top:8px}
+.rows b{font-family:var(--font-serif);color:var(--accent)}
+.guide-top{display:grid;gap:0}
+.guide-top .gc{position:relative;background:linear-gradient(120deg,var(--green),var(--pink));padding:22px}
+.guide-top .gc img{width:64px;height:64px;background:#fbf9f1;border-radius:50%;padding:8px;aspect-ratio:1/1;object-fit:contain}
+.guide-top h3{font-size:1.25rem;margin:10px 0 2px}
+.guide-top p{margin:0;font-size:.9375rem;color:var(--ink);opacity:.82}
+@media (min-width:760px){.rcover img{aspect-ratio:16/9}.card.rcard{padding:0}}
+footer{margin-top:40px;text-align:center;color:var(--muted);font-size:.8125rem}
+@media (min-width:700px){.shots{grid-template-columns:1fr 1fr}.card{padding:28px}}
+
+.crumb{display:inline-block;margin:0 0 14px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);text-decoration:none;font-size:.875rem;font-weight:700;color:var(--green-d)}
+.crumb:focus-visible{outline:3px solid var(--green-d);outline-offset:2px}
+.subhead{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.subhead img{width:44px;height:44px;border-radius:50%;background:#fbf9f1;padding:6px;object-fit:contain}
+.subhead span{font-family:var(--font-serif);font-weight:700;font-size:1.0625rem}
+</style>
+<style>
+.m-lead{font-size:.9375rem;color:var(--muted);margin:0 0 6px}
+.feat{display:grid;gap:10px;margin-top:14px}
+.feat div{padding:14px 16px;border-radius:14px;background:var(--green)}
+.feat div:nth-child(2){background:var(--pink)}
+.feat h3{font-size:1rem;margin:0 0 2px}.feat p{margin:0;font-size:.875rem}
+.steps3{display:grid;gap:12px;margin:14px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps3 li{counter-increment:s;position:relative;padding:14px 16px 14px 56px;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.steps3 li::before{content:counter(s);position:absolute;left:14px;top:10px;font-family:var(--font-serif);font-size:1.75rem;font-weight:700;color:var(--accent)}
+.steps3 b{display:block;font-size:1rem}.steps3 span{font-size:.875rem;color:var(--muted)}
+.roles{display:grid;gap:12px;margin-top:14px}
+.role{padding:16px;border-radius:14px;background:var(--card);border:1px solid var(--line)}
+.role h3{font-size:1rem;margin:0 0 6px}.role ul{margin:0;padding-left:1.2em;font-size:.875rem}
+.role .k{font-size:.75rem;color:var(--green-d);font-weight:700}
+.done{margin-top:12px;padding:14px;text-align:center;border-radius:14px;background:linear-gradient(120deg,var(--green),var(--pink));font-family:var(--font-serif);font-weight:700}
+@media (min-width:760px){.feat,.roles{grid-template-columns:1fr 1fr 1fr}.roles{grid-template-columns:1fr 1fr}.steps3{grid-template-columns:repeat(3,1fr)}}
+</style>
+<style>
+.pts{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
+.pts li{padding:3px 14px;border-radius:999px;background:var(--green);font-size:.8125rem;font-weight:700}
+.pts li:nth-child(2){background:var(--pink)}
+.shot{margin-top:30px}
+.shot h2{font-size:1.1875rem;margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.shot .no{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:.875rem;float:left;margin:2px 10px 0 0}
+.shot img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
+.shot p{margin:10px 0 0;font-size:.9375rem}
+</style>
+<style>
+.big{font-family:var(--font-serif);font-size:1.25rem;line-height:1.7;margin:8px 0 8px}
+.big b{color:var(--accent)}
+.ba{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center}
+.ba .b{position:relative;text-align:center;padding:26px 8px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.ba .af{background:linear-gradient(135deg,var(--green),var(--pink));border-color:transparent}
+.ba .lab{position:absolute;top:8px;left:50%;transform:translateX(-50%);font-size:.6875rem;font-weight:700;color:var(--muted);white-space:nowrap}
+.ba .ic{font-size:2.25rem;line-height:1.3}.ba b{display:block;font-size:.9375rem}.ba small{font-size:.75rem;color:var(--muted)}
+.ba .arr{font-size:1.5rem;color:var(--accent);font-weight:700}
+.cardmock{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center}
+.phone{background:var(--card);border:3px solid var(--ink);border-radius:22px;padding:12px 10px 10px;text-align:center}
+.ph-t{font-family:var(--font-serif);font-weight:700;font-size:.8125rem;margin-bottom:6px;padding-bottom:6px;border-bottom:1px dashed var(--line)}
+.ph-ear{width:70%;margin:0 auto}
+.inside{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.inside li{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--green)}
+.inside li:nth-child(2){background:var(--pink)}
+.inside i{flex:none;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-style:normal;font-size:.8125rem;font-weight:700}
+.inside b{font-size:.9375rem;display:block;line-height:1.5}.inside small{font-size:.75rem;color:var(--muted)}
+.flow3{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.flow3 li{position:relative;text-align:center;padding:14px 6px;border-radius:14px;background:var(--card);border:1px solid var(--line)}
+.flow3 li+li::before{content:"›";position:absolute;left:-10px;top:42%;color:var(--accent);font-weight:700;font-size:1.25rem}
+.flow3 .n{display:grid;place-items:center;width:30px;height:30px;margin:0 auto 4px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700}
+.flow3 b{display:block}.flow3 small{font-size:.75rem;color:var(--muted);line-height:1.5;display:block}
+.mix{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;text-align:center}
+.mix>div{padding:14px 8px;border-radius:14px;background:var(--green)}.mix>div:last-child{background:var(--pink)}
+.mix small{display:block;font-size:.75rem;color:var(--muted)}.mix b{font-size:.875rem;line-height:1.5;display:block}
+.mix span{font-size:1.25rem;font-weight:700;color:var(--accent)}
+@media (max-width:420px){.cardmock{grid-template-columns:128px 1fr;gap:12px}}
+.cardimg{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}.cap{margin:10px 0 0;font-size:.9375rem}
+</style>
+</head>
+<body>
+<main class="page">
+<a class="crumb" href="../">← Minako Works にもどる</a>
+<section class="sec">
+  <div class="eyebrow" style="font-size:.75rem;letter-spacing:.24em;color:var(--green-d);font-weight:700">女性美容サロン向け</div>
+  <h2 style="font-size:1.5rem;margin:2px 0 6px">耳つぼカードツール<span style="display:block;font-size:.875rem;font-weight:500;color:var(--muted)">― 女性美容サロン向け ―</span></h2>
+  <p class="big">耳つぼ施術のあとのカードを、<br><b>LINEで届く画像</b>に。</p>
+  <p class="m-lead">耳つぼ施術のある女性向け美容サロンのオーナーさんとの雑談から生まれました。</p>
+</section>
+
+<section class="shot">
+  <h2>Before → After</h2>
+  <div class="ba">
+    <div class="b"><span class="lab">これまで</span><div class="ic">📄</div><b>紙のカード</b><small>施術後に手渡し</small></div>
+    <div class="arr" aria-hidden="true">→</div>
+    <div class="b af"><span class="lab">これから</span><div class="ic">💬</div><b>画像をLINEで</b><small>その場で即送信</small></div>
+  </div>
+</section>
+
+<section class="shot">
+  <h2>届くカードの中身</h2>
+  <a href="img/card.webp" target="_blank" rel="noopener"><img class="cardimg" src="img/card.webp" width="754" height="369" alt="届くカードのイメージ。施術後の耳の写真と、ツボのイラスト解説が並ぶスマホ画面" loading="lazy"></a>
+  <p class="cap">施術後の写真と、ツボのイラスト解説をひとまとめに。写真が撮れない日は、イラストだけでもOK。<br><small style="color:var(--muted)">画像をタップすると大きく見られます。</small></p>
+</section>
+
+<section class="shot">
+  <h2>施術後、約1分で送信</h2>
+  <ol class="flow3">
+    <li><span class="n">1</span><b>入力</b><small>お名前・お悩み</small></li>
+    <li><span class="n">2</span><b>タップ</b><small>耳のイラストで位置を選ぶ</small></li>
+    <li><span class="n">3</span><b>送信</b><small>完成した画像をLINEへ</small></li>
+  </ol>
+</section>
+
+<div style="margin-top:30px"><a class="crumb" href="../">← Minako Works にもどる</a></div>
+<footer><p>© Minako Sasaki ／ Aloha Code</p></footer>
+</main>
+</body>
+</html>

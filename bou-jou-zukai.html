@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<title>今日の坊と嬢｜図解ページ</title>
+<meta property="og:title" content="今日の坊と嬢｜図解ページ">
+<meta property="og:description" content="単身赴任の夫に届ける、家族の毎日レポート。AIで作る仕組みの図解です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3eee7; --card:#fffdf8; --ink:#2b2824; --muted:#6b645c; --line:#e3dccf;
+  --green:#d9e7de; --green-d:#6e9f8e; --pink:#efd8d3; --accent:#b2493b;
+  --font-serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --font-sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.85;font-size:1rem}
+.page{max-width:1040px;margin:0 auto;padding:24px 16px 56px}
+h1,h2,h3{font-family:var(--font-serif);font-weight:700;margin:0;line-height:1.5}
+p{margin:0 0 .8em}
+.hero{background:linear-gradient(120deg,var(--green) 0%,var(--pink) 100%);border-radius:20px;padding:28px 28px 26px;position:relative}
+.hero .kicker{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.8125rem;letter-spacing:.2em}
+.hero .mark{width:40px;height:40px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:#fff;font-size:1.25rem}
+.hero h1{font-size:clamp(1.75rem,6vw,2.75rem);letter-spacing:.12em;margin:18px 0 6px}
+.hero .lead{color:var(--muted);margin:0 0 14px;font-size:1.0625rem}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:4px 14px;font-size:.875rem;font-weight:700}
+.pill::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.pill.g::before{background:var(--green-d)}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:18px;margin-top:22px;overflow:hidden;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.sec>header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 22px;background:linear-gradient(90deg,#eaf2ec,#fbf6f0);border-bottom:1px dashed var(--line)}
+.sec>header h2{font-size:1.25rem}
+.sec>header span{font-size:.8125rem;color:var(--muted);letter-spacing:.1em}
+.body{padding:20px 22px 22px}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.box.tint{background:linear-gradient(135deg,#fbf0ee,#eef5f0)}
+.box h3{font-size:1rem;margin-bottom:4px}
+.box p{margin:0;color:var(--muted);font-size:.9375rem}
+.wide{grid-column:1/-1}
+ul.dots{margin:0;padding:0;list-style:none}
+ul.dots li{position:relative;padding-left:1.3em;margin:6px 0}
+ul.dots li::before{content:"";position:absolute;left:.25em;top:.8em;width:6px;height:6px;border-radius:50%;background:var(--ink)}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:26px;margin:10px 0 18px;text-align:center}
+.step{position:relative;background:var(--green);border-radius:14px;padding:18px 10px;box-shadow:0 6px 14px rgba(0,0,0,.06)}
+.step:nth-child(even){background:var(--pink)}
+.step b{display:block;font-family:var(--font-serif);font-size:1.0625rem}
+.step small{color:var(--muted);font-size:.8125rem}
+.step:not(:last-child)::after{content:"▶";position:absolute;right:-22px;top:50%;transform:translateY(-50%);color:#8d8f8b;font-size:.9rem}
+.sub{margin:18px 0 8px;font-family:var(--font-serif);color:var(--accent);font-weight:700;font-size:.9375rem}
+.tag{display:inline-block;border-radius:999px;padding:0 10px;font-size:.75rem;font-weight:700;color:#fff;background:var(--accent);margin-bottom:6px}
+.tag.g{background:var(--green-d)}
+.note{background:#eef5f0;border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:.9375rem;margin-top:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{background:#faf0ee;border:1px solid var(--line);border-radius:999px;padding:2px 14px;font-size:.875rem}
+.chip.g{background:#eef5f0}
+.report{margin-top:16px;border:1px dashed var(--accent);border-radius:16px;padding:18px 18px 8px;background:#fffaf5;position:relative}
+.report .stamp{position:absolute;top:-12px;left:16px;background:var(--accent);color:#fff;font-size:.75rem;font-weight:700;padding:2px 12px;border-radius:999px}
+.report h3{font-size:.9375rem;color:var(--accent);margin:10px 0 4px}
+.report p,.report li{font-size:.9375rem;margin:0 0 6px;color:var(--ink)}
+.report ul{margin:0 0 8px;padding-left:1.2em}
+.bar{display:grid;grid-template-columns:4rem 1fr 2.5rem;gap:10px;align-items:center;margin:6px 0;font-size:.9375rem}
+.bar i{display:block;height:10px;border-radius:99px;background:#e8e1d6;position:relative;overflow:hidden}
+.bar i::after{content:"";position:absolute;inset:0;width:var(--w);background:linear-gradient(90deg,#9fc7b6,#6e9f8e);border-radius:99px}
+.bar.s i::after{background:linear-gradient(90deg,#e3a79d,#b2493b)}
+table{width:100%;border-collapse:collapse;font-size:.9375rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{background:#eef5f0;font-weight:700}
+td:last-child,th:last-child{white-space:nowrap}
+.sum{margin-top:12px;text-align:center;background:#fbece8;border:1px solid #efcfc8;border-radius:12px;padding:12px;font-weight:700}
+.letter{margin-top:22px;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-right:5px solid var(--green-d);border-radius:12px;padding:22px 24px}
+.letter .from{text-align:center;color:var(--muted);font-size:.8125rem;letter-spacing:.2em;margin-bottom:10px}
+.letter p{font-family:var(--font-serif);line-height:2}
+.letter .sign{text-align:right;color:var(--accent);font-size:.875rem;margin:8px 0 0}
+footer{margin-top:22px;padding:14px 20px;border-radius:14px;background:linear-gradient(90deg,#f5ebe3,#f8f3ec);font-size:.875rem;color:var(--muted)}
+footer b{font-family:var(--font-serif);color:var(--ink)}
+@media (max-width:640px){
+  .step:not(:last-child)::after{content:"▼";right:auto;left:50%;top:auto;bottom:-22px;transform:translateX(-50%)}
+  .flow{gap:28px}
+  .hero{padding:22px 18px}
+  .body{padding:16px 14px 18px}
+  .sec>header{padding:12px 14px}
+}
+</style>
+<style>.crumb{display:inline-block;margin:0 0 14px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);text-decoration:none;font-size:.875rem;font-weight:700;color:#4f8170}.crumb:focus-visible{outline:3px solid #4f8170;outline-offset:2px}</style>
+</head>
+<body>
+<div class="page">
+<a class="crumb" href="./">← Minako Works にもどる</a>
+
+<header class="hero">
+  <div class="kicker"><span class="mark" aria-hidden="true">&#9825;</span><span>図解ページ（スライド構成）</span></div>
+  <h1>「今日の坊と嬢」</h1>
+  <p class="lead">単身赴任の夫に届ける、家族の毎日レポート</p>
+  <div class="pills"><span class="pill">ジャーナル</span><span class="pill g">AI</span><span class="pill">専門家視点</span></div>
+</header>
+
+<section class="sec">
+  <header><h2>なぜ作ったのか</h2><span>Why</span></header>
+  <div class="body">
+    <div class="grid g2">
+      <div class="box tint">
+        <h3>家族の状況</h3>
+        <p>夫は単身赴任中。坊（中学生）はADHD・ASD特性があり、エネルギッシュな伸びしろ期待中。嬢は定型発達。二人の違いを味わいながら、日々の成長を楽しんでいます。</p>
+      </div>
+      <div class="box tint">
+        <h3>毎日のジャーナル</h3>
+        <p>NotebookLMで毎日、音声ジャーナリング。正直すぎる本音や子育て以外の内容も含まれるため、そのままでは送れません。子育ての部分を切り出しています。</p>
+      </div>
+      <div class="box tint wide">
+        <h3>夫の受け取り方</h3>
+        <p>子どものことなので、文章が長くなっても問題なし。起きた事実や背景を正確に知りたいタイプです。だから文章量が多くてもOKという前提でレポートを設計しています。祖父母にも同様に共有していて、関わり方をアップデートしてもらう目的も兼ねています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <header><h2>このツールが目指すもの</h2><span>Aim</span></header>
+  <div class="body">
+    <ul class="dots">
+      <li><b>毎日の報告を自動化</b>し、夫婦の情報共有をスムーズに</li>
+      <li><b>専門家視点の分析</b>で、子どもへの関わり方をアップデート</li>
+      <li><b>月次サマリー</b>で1か月を振り返り、学校の面談や、医師への相談など、さまざまな相談の場で「昨日今日の記憶」ではなく「客観的な記録」として活用</li>
+      <li>単身赴任でも<b>「一緒に子育て」できる</b>夫婦の仕組みづくり</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec">
+  <header><h2>ツールの仕組み（フロー図＋4つのパーツ説明）</h2><span>Flow</span></header>
+  <div class="body">
+    <div class="flow" role="img" aria-label="ジャーナル入力、AI自動生成、家族レポート、夫にURL共有の順に進む流れ">
+      <div class="step"><b>ジャーナル入力</b><small>NotebookLM等の記録</small></div>
+      <div class="step"><b>AI自動生成</b><small>Claudeで分析・生成</small></div>
+      <div class="step"><b>家族レポート</b><small>紙の便り風HTML</small></div>
+      <div class="step"><b>夫にURL共有</b><small>LINEでURL送信</small></div>
+    </div>
+
+    <p class="sub">自動化の4つのパーツ</p>
+    <div class="grid g4">
+      <div class="box"><span class="tag">トリガー</span><h3>毎日のジャーナル入力</h3><p>入力をきっかけに、生成フローが動きます。</p></div>
+      <div class="box"><span class="tag g">ソース元</span><h3>NotebookLMの音声テキスト化ジャーナル</h3><p>書いた・話した記録を、そのまま貼り付けできます。</p></div>
+      <div class="box"><span class="tag">処理する場所</span><h3>Anthropic API（Claude）</h3><p>AI分析・レポート生成を担当します。</p></div>
+      <div class="box"><span class="tag g">届ける先</span><h3>夫へ共有URLをLINEで送信</h3><p>同じURLで、いつでも読み返せます。</p></div>
+    </div>
+
+    <p class="sub">AIに組み込まれている専門家視点（3つ）</p>
+    <div class="grid g3">
+      <div class="box"><h3>アドラー心理学</h3><p>勇気づけ・課題の分離・共同体感覚の視点で分析します。</p></div>
+      <div class="box"><h3>コーチング的視点</h3><p>成長・可能性・強みに焦点を当てた関わり方を提案します。</p></div>
+      <div class="box"><h3>ADHD/ASD特性への理解</h3><p>坊の特性を踏まえた行動の背景分析と、親へのアドバイス。嬢との違いも踏まえて提案します。</p></div>
+    </div>
+    <div class="note">「本音のジャーナル」→「夫に届けられるレポート」へ。<b>専門家視点</b>を混ぜて、事実・背景・関わり方まで一気通貫で届けます。</div>
+  </div>
+</section>
+
+<section class="sec">
+  <header><h2>デイリーレポート</h2><span>Daily</span></header>
+  <div class="body">
+    <div class="box">
+      <h3>4つのパーツで構成</h3>
+      <p>事実・感情・専門知識・親の視点を、バランスよく届ける設計です。</p>
+      <div class="chips"><span class="chip">今日の出来事</span><span class="chip g">今日のハイライト</span><span class="chip g">専門家の視線</span><span class="chip">今日のママより</span></div>
+    </div>
+
+    <div class="report" aria-label="レポートのイメージ（架空の内容）">
+      <span class="stamp">レポートのイメージ（架空の内容です）</span>
+      <h3>今日の出来事</h3>
+      <ul>
+        <li><b>坊</b>：帰宅後、自分からタイマーをかけて宿題を始めた。夕食前に、ゲームの時間をめぐって少し言い合いになった。</li>
+        <li><b>嬢</b>：学校で習った歌を披露してくれた。</li>
+      </ul>
+      <h3>今日のハイライト</h3>
+      <p>宿題を始めるまでの切り替えが、いつもよりスムーズでした。言い合いのあとも、坊のほうから「ごめん」と切り出せていました。</p>
+      <h3>専門家の視線</h3>
+      <p>坊の切り替えは、タイマーのような「見通しの持てる合図」があると進みやすいようです（ADHD・ASD特性の視点）。嬢は、人前で披露することで安心感を得るタイプかもしれません。二人の違いに合わせて、関わり方を変えてみる価値がありそうです。</p>
+      <h3>今日のママより</h3>
+      <p>ドタバタだったけれど、坊が自分から動けた一日。小さな「できた」を、夫にも共有したいと思います。</p>
+    </div>
+
+    <div class="box" style="margin-top:14px"><h3>共有</h3><p>共有URLの発行機能があります。</p></div>
+  </div>
+</section>
+
+<section class="sec">
+  <header><h2>月次サマリー</h2><span>Monthly</span></header>
+  <div class="body">
+    <div class="box">
+      <h3>今月の状態スコア（AI評価）</h3>
+      <p>棒グラフで、見た瞬間に傾向が分かります。（下はサンプルの数値です）</p>
+      <div class="bar"><span>安定</span><i style="--w:78%"></i><b>7.8</b></div>
+      <div class="bar s"><span>ストレス</span><i style="--w:58%"></i><b>5.8</b></div>
+    </div>
+    <div class="grid g2" style="margin-top:12px">
+      <div class="box"><h3>傾向まとめ／AIの月次振り返り（専門家視点）</h3><p>坊と嬢、それぞれの傾向を並べて比較。1か月の成長を言葉にして、次の月に活かします。</p></div>
+      <div class="box"><h3>共有URL永続化</h3><p>あとから見返せる「家族の履歴」。月次の共有もURLで完結します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <header><h2>工夫したポイント（6つ）</h2><span>Tips</span></header>
+  <div class="body">
+    <div class="grid g2">
+      <div class="box tint"><h3>プロンプト設計</h3><p>ママの感情・本音は書かず、事実と背景だけを夫に届けるよう指示しています。</p></div>
+      <div class="box tint"><h3>安定した出力品質</h3><p>毎回同じ構成・トーンになるよう、AIへの指示を細かく調整しています。</p></div>
+      <div class="box tint"><h3>専門家視点の組み込み</h3><p>アドラー心理学・コーチング・ADHD特性の3つを、プロンプトに埋め込みました。</p></div>
+      <div class="box tint"><h3>4つのパーツ設計</h3><p>事実・感情・専門知識・親の視点を、バランスよく届ける構成です。</p></div>
+      <div class="box tint"><h3>データ永続化</h3><p>Google Sheetsに自動保存。共有URLがずっと有効です。</p></div>
+      <div class="box tint"><h3>過去データ対応</h3><p>日付を手動で変更して、過去のジャーナルをさかのぼって入力できます。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <header><h2>費用・維持費</h2><span>Cost</span></header>
+  <div class="body">
+    <table>
+      <thead><tr><th>項目</th><th>内容</th><th>目安</th></tr></thead>
+      <tbody>
+        <tr><td><b>Anthropic API（Claude Haiku）</b></td><td>レポート1回あたり</td><td>約1〜3円</td></tr>
+        <tr><td><b>Render（ホスティング）</b></td><td>無料プラン使用中（スリープあり）</td><td>無料</td></tr>
+        <tr><td><b>Google Sheets</b></td><td>自動保存・履歴管理</td><td>無料</td></tr>
+        <tr><td><b>GitHub Pages（図解ページ公開）</b></td><td>このページのホスティング</td><td>無料</td></tr>
+      </tbody>
+    </table>
+    <div class="sum">合計目安：月30回生成で 約30〜90円程度</div>
+  </div>
+</section>
+
+<div class="letter">
+  <div class="from">― Minakoより ―</div>
+  <p>子どもの成長を一緒に見守りながら、専門家の視点をリアルタイムに取り入れる。その積み重ねが、親自身の気づきと成長につながっていく。身近な人との関係を丁寧に育てることが、社会への貢献の出発点になると信じている。</p>
+  <p>このツールが、その小さなきっかけになれば――同じように頑張る家族の、ひとつの道しるべになれば、こんなに嬉しいことはない。</p>
+  <p class="sign">今日の坊と嬢 ✦</p>
+</div>
+
+<div style="margin-top:28px;text-align:center"><a class="crumb" href="./">← Minako Works にもどる</a></div>
+<footer><b>今日の坊と嬢</b> ／ 単身赴任でも「一緒に子育て」できる距離感へ</footer>
+
+</div>
+</body>
+</html>

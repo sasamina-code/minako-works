@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<title>サロンのリーフレット｜Minako Works</title>
+<meta name="description" content="お顔そりサロンの三つ折りリーフレットの制作実績と、つくり方。">
+<style>
+:root{
+  --bg:#f3eee7; --card:#fffdf8; --ink:#2b2824; --muted:#6b645c; --line:#e3dccf;
+  --green:#d9e7de; --green-d:#4f8170; --pink:#efd8d3; --accent:#b2493b;
+  --font-serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --font-sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#1f1d1a; --card:#2a2723; --ink:#f0ebe3; --muted:#b9b0a4; --line:#433e37;
+        --green:#2f4239; --green-d:#8fc1ae; --pink:#4a3531; --accent:#e58a7c}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.85;font-size:1rem}
+.page{max-width:980px;margin:0 auto;padding:24px 16px 64px}
+h1,h2,h3{font-family:var(--font-serif);font-weight:700;margin:0;line-height:1.5}
+p{margin:0 0 .8em}
+a{color:inherit}
+.hero{background:linear-gradient(120deg,var(--green) 0%,var(--pink) 100%);border-radius:20px;padding:22px 20px 20px}
+.hero .hrow{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+.hero .logo{flex:none;width:72px;height:72px;background:#fbf9f1;border-radius:50%;padding:9px 9px 7px;object-fit:contain;box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.hero .kicker{color:var(--muted);font-size:.75rem;letter-spacing:.2em}
+.hero h1{font-size:clamp(2rem,9vw,3.5rem);letter-spacing:.03em;margin:2px 0 0;line-height:1.15;white-space:nowrap}
+.hero h1 .works{font-weight:500;color:var(--accent)}
+.hero .catch{font-family:var(--font-serif);font-size:clamp(1rem,3.8vw,1.3125rem);margin:0 0 8px}
+.hero .who{color:var(--muted);margin:0;font-size:.875rem;line-height:1.8}
+@media (min-width:700px){.hero{padding:30px 34px 28px}.hero .hrow{gap:26px;margin-bottom:16px}.hero .logo{width:120px;height:120px;padding:16px 16px 12px}}
+.sec{margin-top:36px}
+.sec>h2{font-size:1.375rem;margin-bottom:6px}
+.sec>.lead{color:var(--muted);font-size:.9375rem;margin-bottom:16px}
+.tag{display:inline-block;border-radius:999px;padding:0 12px;font-size:.75rem;font-weight:700;color:#fff;background:var(--accent);margin-bottom:8px}
+.tag.g{background:var(--green-d);color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{font-size:1.1875rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.9375rem}
+.card .more{display:inline-block;margin-top:6px;padding:8px 18px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:.9375rem}
+.card .more:focus-visible,.dl:focus-visible{outline:3px solid var(--green-d);outline-offset:2px}
+ul.dots{margin:8px 0 0;padding:0;list-style:none}
+ul.dots li{position:relative;padding-left:1.3em;margin:6px 0;font-size:.9375rem}
+ul.dots li::before{content:"";position:absolute;left:.25em;top:.8em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.shots{display:grid;gap:14px;margin-top:16px}
+.shots figure{margin:0}
+.shots img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+.shots figcaption{font-size:.8125rem;color:var(--muted);margin-top:6px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:14px 0 4px;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;background:var(--green);border-radius:14px;padding:14px 14px 12px}
+.steps li:nth-child(even){background:var(--pink)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--bg);font-weight:700;font-size:.8125rem;margin-bottom:6px}
+.steps b{display:block;font-family:var(--font-serif)}
+.steps span{font-size:.875rem;color:var(--muted)}
+.note{background:var(--green);border-radius:12px;padding:12px 16px;font-size:.9375rem;margin-top:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.mini h3{font-size:1rem;margin-bottom:2px}
+.mini p{margin:0;font-size:.875rem;color:var(--muted)}
+.dl{display:inline-block;margin-top:10px;font-size:.875rem;color:var(--muted)}
+
+/* 子育てレポート ビジュアル */
+.feature{padding:0;overflow:hidden}
+.feature .top{padding:26px 22px 20px;background:linear-gradient(120deg,var(--green),var(--pink))}
+.feature .top h3{font-size:clamp(1.375rem,5vw,2rem);line-height:1.45;margin:4px 0 6px}
+.feature .top p{color:var(--ink);opacity:.8;margin:0;font-size:.9375rem}
+.flowrow{display:flex;flex-wrap:wrap;gap:8px 4px;align-items:center;margin-top:16px}
+.flowrow .n{background:var(--card);border-radius:999px;padding:5px 14px;font-size:.8125rem;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.flowrow .ar{color:var(--accent);font-weight:700;padding:0 2px}
+.feature .mid{display:grid;gap:22px;padding:24px 22px;align-items:start}
+.phone{justify-self:center;width:min(300px,100%);background:var(--card);border:2px solid var(--ink);border-radius:30px;padding:14px 12px 16px;box-shadow:0 14px 30px rgba(0,0,0,.14);position:relative}
+.phone::before{content:"";display:block;width:70px;height:6px;border-radius:99px;background:var(--line);margin:0 auto 10px}
+.phone .ph{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--font-serif);font-weight:700;font-size:.9375rem;margin-bottom:8px}
+.phone .ph small{font-family:var(--font-sans);font-weight:400;color:var(--muted);font-size:.6875rem}
+.blk{border-radius:12px;padding:8px 10px 9px;margin-bottom:7px;border-left:4px solid var(--accent);background:var(--bg)}
+.blk.g{border-left-color:var(--green-d)}
+.blk b{display:block;font-size:.75rem;color:var(--accent);margin-bottom:1px}
+.blk.g b{color:var(--green-d)}
+.blk span{display:block;font-size:.75rem;line-height:1.6;color:var(--ink)}
+.mini-bars{margin-top:8px;padding:8px 10px;border:1px dashed var(--line);border-radius:12px;font-size:.6875rem}
+.mini-bars div{display:grid;grid-template-columns:4.4em 1fr 1.8em;gap:6px;align-items:center;margin:3px 0}
+.mini-bars i{display:block;height:7px;border-radius:99px;background:var(--line);position:relative;overflow:hidden}
+.mini-bars i::after{content:"";position:absolute;inset:0;width:var(--w);border-radius:99px;background:var(--green-d)}
+.mini-bars .s i::after{background:var(--accent)}
+.sample-note{text-align:center;font-size:.6875rem;color:var(--muted);margin-top:6px}
+.pts{display:grid;gap:12px}
+.pt{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;background:var(--bg);border-radius:14px;padding:12px 14px}
+.pt .ic{width:44px;height:44px;border-radius:12px;background:var(--green);display:grid;place-items:center;font-family:var(--font-serif);font-weight:700;font-size:1.125rem;color:var(--ink)}
+.pt:nth-child(even) .ic{background:var(--pink)}
+.pt h4{margin:0 0 2px;font-family:var(--font-serif);font-size:1rem}
+.pt p{margin:0;font-size:.875rem;color:var(--muted)}
+.feature .bot{padding:0 22px 24px;display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center}
+.feature .bot .cap{font-size:.8125rem;color:var(--muted)}
+@media (min-width:760px){.feature .mid{grid-template-columns:320px 1fr;gap:34px;padding:30px 30px}.feature .top{padding:34px 30px 24px}.feature .bot{padding:0 30px 30px}}
+
+/* 体験レポート */
+.card.rcard{padding:0;overflow:hidden;margin-bottom:16px}
+.rcover{position:relative;display:block;color:#fff;text-decoration:none;background:#101410}
+.rcover img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;filter:brightness(.78)}
+.rcover .rt{position:absolute;left:0;right:0;bottom:0;padding:48px 22px 20px;background:linear-gradient(to top,rgba(8,12,9,.82),rgba(8,12,9,0))}
+.rcover .k{font-size:.75rem;letter-spacing:.28em;opacity:.92}
+.rcover h3{font-size:clamp(1.375rem,5.4vw,2rem);margin:4px 0 2px;line-height:1.4;color:#fff}
+.rcover .s{font-size:.9375rem;opacity:.95}
+.rbody{padding:20px 22px 24px}
+.rbody p{color:var(--muted);font-size:.9375rem}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 4px}
+.strip img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:10px}
+.rows{display:grid;gap:10px;margin:14px 0 4px}
+.rows .r{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:baseline;font-size:.875rem;border-top:1px dashed var(--line);padding-top:8px}
+.rows b{font-family:var(--font-serif);color:var(--accent)}
+.guide-top{display:grid;gap:0}
+.guide-top .gc{position:relative;background:linear-gradient(120deg,var(--green),var(--pink));padding:22px}
+.guide-top .gc img{width:64px;height:64px;background:#fbf9f1;border-radius:50%;padding:8px;aspect-ratio:1/1;object-fit:contain}
+.guide-top h3{font-size:1.25rem;margin:10px 0 2px}
+.guide-top p{margin:0;font-size:.9375rem;color:var(--ink);opacity:.82}
+@media (min-width:760px){.rcover img{aspect-ratio:16/9}.card.rcard{padding:0}}
+footer{margin-top:40px;text-align:center;color:var(--muted);font-size:.8125rem}
+@media (min-width:700px){.shots{grid-template-columns:1fr 1fr}.card{padding:28px}}
+
+.crumb{display:inline-block;margin:0 0 14px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);text-decoration:none;font-size:.875rem;font-weight:700;color:var(--green-d)}
+.crumb:focus-visible{outline:3px solid var(--green-d);outline-offset:2px}
+.subhead{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.subhead img{width:44px;height:44px;border-radius:50%;background:#fbf9f1;padding:6px;object-fit:contain}
+.subhead span{font-family:var(--font-serif);font-weight:700;font-size:1.0625rem}
+</style>
+</head>
+<body>
+<main class="page">
+<a class="crumb" href="../">← Minako Works にもどる</a>
+<section class="sec" aria-labelledby="works">
+  <h2 id="works">お顔そりサロン「めぐりの」の三つ折りリーフレット</h2>
+  <p class="lead">サロンさまのお仕事です。個人情報は、このページ用にダミーへ差し替えています。</p>
+  <article class="card">
+    <span class="tag g">制作実績</span>
+    <h3>お顔そりサロン「めぐりの」三つ折りリーフレット</h3>
+    <p>理容師さんが営むお顔そりサロンの、A4・三つ折りリーフレット（表面・裏面）をデザインしました。やさしい緑とベージュで、「ほっとできる」空気感を目指しています。</p>
+    <ul class="dots">
+      <li>表面：サロンの想い／5つの理由／サロン情報／アクセス地図</li>
+      <li>裏面：お顔そりとは？／メニューと料金／はじめての方へのQ&amp;A</li>
+    </ul>
+    <div class="shots">
+      <figure>
+        <img src="../images/leaflet-1.webp" width="1600" height="1131" loading="lazy" alt="三つ折りリーフレットの表面。サロンの想い、5つの理由、サロン情報とアクセス地図、表紙が並ぶ。顔写真・連絡先・QRコードはダミー。">
+        <figcaption>表面（顔写真・住所・電話・QRコードはダミー、駅名などはぼかし）</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/leaflet-2.webp" width="1600" height="1131" loading="lazy" alt="三つ折りリーフレットの裏面。お顔そりの説明、メニューと料金、よくある質問、ホームページ用のダミーQRコード。">
+        <figcaption>裏面（メニュー・料金・Q&amp;A）</figcaption>
+      </figure>
+    </div>
+    <a class="dl" href="../leaflet-meguri-dummy.pdf">PDFで見る（ダミー版）</a>
+  </article>
+
+  <article class="card" style="margin-top:14px">
+    <span class="tag g">つくり方</span>
+    <h3>CanvaとClaudeをつないで、話しながら仕上げる</h3>
+    <p>このリーフレットは、CanvaとClaudeを接続して作業しています。細かい位置の調整や文字の直しは、画面をいじるのではなく、口頭でClaudeに伝えて進めました。</p>
+    <ol class="steps">
+      <li><b>やりたいことを伝える</b><span>「この文字を少し上へ」「色をもう少し濃く」などを、声や文章で。</span></li>
+      <li><b>Claudeがデザインを直す</b><span>Canvaのデザインを、Claudeが直接編集します。</span></li>
+      <li><b>プレビューで確認する</b><span>仕上がりを見て、気になるところをまた伝えます。</span></li>
+      <li><b>保存して、次へ</b><span>OKなら保存。次の直しにすぐ進めます。</span></li>
+    </ol>
+    <p class="note">この掲載用ページの個人情報の置き換え（顔・住所・電話・QRコードなど）も、同じようにClaudeへ指示して仕上げました。</p>
+  </article>
+</section>
+<div style="margin-top:30px"><a class="crumb" href="../">← Minako Works にもどる</a></div>
+<footer><p>© Minako Sasaki ／ Aloha Code</p></footer>
+</main>
+</body>
+</html>
