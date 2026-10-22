@@ -1,16 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-<meta name="googlebot" content="noindex, nofollow">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/>
+<meta content="noindex, nofollow" name="googlebot"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <title>Minako Works｜佐々木みな子のポートフォリオ</title>
-<meta property="og:title" content="Minako Works">
-<meta property="og:description" content="暮らしの困りごとから生まれた、AIとのものづくり。">
+<meta content="Minako Works" property="og:title"/>
+<meta content="暮らしの困りごとから生まれた、AIとのものづくり。" property="og:description"/>
 <style>
 :root{
   --bg:#f3eee7; --card:#fffdf8; --ink:#2b2824; --muted:#6b645c; --line:#e3dccf;
@@ -24,16 +25,18 @@
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.85;font-size:1rem}
+body{word-break:keep-all;overflow-wrap:break-word;line-break:strict;margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.85;font-size:1rem}
 .page{max-width:980px;margin:0 auto;padding:24px 16px 64px}
 h1,h2,h3{font-family:var(--font-serif);font-weight:700;margin:0;line-height:1.5}
 p{margin:0 0 .8em}
+h1,h2,h3,.catch,.intro{text-wrap:balance}
 a{color:inherit}
 .hero{background:linear-gradient(120deg,var(--green) 0%,var(--pink) 100%);border-radius:20px;padding:22px 20px 20px}
 .hero .hrow{display:flex;align-items:center;gap:16px;margin-bottom:12px}
 .hero .logo{flex:none;width:72px;height:72px;background:#fbf9f1;border-radius:50%;padding:9px 9px 7px;object-fit:contain;box-shadow:0 4px 14px rgba(0,0,0,.1)}
 .hero .kicker{color:var(--muted);font-size:.75rem;letter-spacing:.2em}
-.hero h1{font-size:clamp(2rem,9vw,3.5rem);letter-spacing:.03em;margin:2px 0 0;line-height:1.15;white-space:nowrap}
+.hero h1{font-size:clamp(1.6rem,8vw,3.5rem);letter-spacing:.02em;margin:2px 0 0;line-height:1.15}
+.hero h1 .mn,.hero h1 .works{display:inline-block}
 .hero h1 .works{font-weight:500;color:var(--accent)}
 .hero .catch{font-family:var(--font-serif);font-size:clamp(1rem,3.8vw,1.3125rem);margin:0 0 8px}
 .hero .who{color:var(--muted);margin:0;font-size:.875rem;line-height:1.8}
@@ -146,8 +149,8 @@ footer{margin-top:40px;text-align:center;color:var(--muted);font-size:.8125rem}
 .grp h2{font-size:1.1875rem;margin:3px 0 0;line-height:1.45}
 .grp .gd{font-size:.8125rem;color:var(--muted);margin:0 0 12px}
 .grp .also{padding:0 4px}
-.tiles{display:grid;gap:10px}
-.tile{display:grid;grid-template-columns:84px 1fr auto;gap:14px;align-items:center;padding:10px 16px 10px 10px;background:var(--card);border:1px solid var(--line);border-radius:16px;text-decoration:none;color:var(--ink)}
+.tiles{display:grid;gap:10px;grid-template-columns:minmax(0,1fr)}
+.tile{display:grid;grid-template-columns:84px minmax(0,1fr) auto;gap:12px;min-width:0;align-items:center;padding:10px 16px 10px 10px;background:var(--card);border:1px solid var(--line);border-radius:16px;text-decoration:none;color:var(--ink)}
 .tile .th{width:84px;height:84px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,var(--green),var(--pink));display:grid;place-items:center}
 .tile .tt{font-family:var(--font-serif);font-weight:700;font-size:.9375rem;text-align:center;line-height:1.4}
 .tile .th img{width:100%;height:100%;object-fit:cover;display:block}
@@ -158,104 +161,104 @@ footer{margin-top:40px;text-align:center;color:var(--muted);font-size:.8125rem}
 .also{margin:10px 0 0;font-size:.8125rem;color:var(--muted);line-height:1.9}
 .also b{color:var(--ink);font-weight:700}
 .also span{display:inline-block;margin:2px 4px 2px 0;padding:0 11px;border:1px dashed var(--line);border-radius:999px;color:var(--ink)}
-.connect{margin-top:40px;padding:22px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.connect{margin-top:16px;padding:22px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
 .connect h2{font-size:1.1875rem;margin-bottom:6px}
 .connect p{margin:0;font-size:.9375rem;color:var(--muted)}
-@media (min-width:760px){.tiles{grid-template-columns:1fr 1fr}.tile{grid-template-columns:96px 1fr auto}.tile .th{width:96px;height:96px}}
+.connect{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
+.connect .want{margin-top:12px;font-weight:700;color:var(--ink)}
+.connect .wl{margin:6px 0 0;padding:0;list-style:none;display:grid;gap:6px}
+.connect .wl li{text-wrap:balance;position:relative;padding:8px 12px 8px 26px;background:var(--bg);border-radius:10px;font-size:.9375rem;line-height:1.7;color:var(--ink)}
+.connect .wl li::before{content:"";position:absolute;left:11px;top:1.15em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.connect .ask{margin-top:12px}
+.connect .selfbtn{white-space:nowrap;display:inline-block;margin-top:14px;padding:9px 20px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:.9375rem}
+.connect .selfbtn:hover{opacity:.9}
+@media (min-width:760px){.tiles{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.tile{grid-template-columns:96px 1fr auto}.tile .th{width:96px;height:96px}}
 </style>
 </head>
 <body>
 <main class="page">
-
 <header class="hero">
-  <div class="hrow">
-    <img class="logo" src="images/logo.png" width="383" height="520" alt="Minako のロゴマーク">
-    <div>
-      <div class="kicker">PORTFOLIO ／ 2026</div>
-      <h1><span class="mn">Minako</span> <span class="works">Works</span></h1>
-    </div>
-  </div>
-  <p class="catch">暮らしの「困った」を、AIと一緒にかたちにする。</p>
-  <p class="who">佐々木みな子｜AIスクールの主な課題制作物やこれまでにつくったもの。気になったものがあれば、ぜひ話しかけてください。</p>
+<div class="hrow">
+<img alt="Minako のロゴマーク" class="logo" height="520" src="images/logo.png" width="383"/>
+<div>
+<div class="kicker">PORTFOLIO ／ 2026</div>
+<h1><span class="mn">Minako</span> <span class="works">Works</span></h1>
+</div>
+</div>
+<p class="catch">AIと<wbr/>一緒に、<wbr/>暮らしから、<wbr/>役に<wbr/>立つ仕事を<wbr/>育てていく。</p>
+<p class="who">佐々<wbr/>木みな<wbr/>子｜AIスクールの<wbr/>主な<wbr/>課題制作物や<wbr/>これまでに<wbr/>つくった<wbr/>もの。</p>
 </header>
-
-<p class="intro">AIがいれば、アプリも、文章も、デザインも。<br>ひとりの暮らしからこれだけの形が生まれています</p>
-
-
-
-<section class="grp a" aria-labelledby="g1">
-  <div class="gh"><img class="gic" src="images/cat-family.webp" width="300" height="300" alt=""><div><div class="eyebrow">FAMILY</div>
-    <h2 id="g1">暮らし・子育てから生まれたツール</h2></div></div>
-  <p class="gd">毎日の子育ての「困った」から、つくりはじめました。</p>
-  <a class="mainbanner" href="kosodate/">
-    <div>
-      <span class="tag">まず見てほしい</span>
-      <h2>子育てレポート「今日の坊と嬢」</h2>
-      <p>特性のある兄と、定型発達の妹。二人の違いが見える記録を、夫や祖父母、学校面談や医師への相談の場にも届けられます。</p>
-    </div>
-    <span class="go" aria-hidden="true">→</span>
-  </a>
-  <div class="next" aria-hidden="true">↓ 発展</div>
-  <div class="tiles">
-    <a class="tile" href="https://graduation-diagram-topaz.vercel.app/">
-      <div class="th" aria-hidden="true"><span class="tt">言葉の<br>工房</span></div>
-      <div><h3>言葉の工房</h3><p>note発信支援ツール（卒業制作）。子育てレポートツールの発展形です。</p></div>
-      <span class="ar" aria-hidden="true">↗</span>
-    </a>
-  </div>
+<section aria-labelledby="cn" class="connect">
+<h2 id="cn">どこかで、<wbr/>つながれたら<wbr/>うれしいです</h2>
+<p>子育て<wbr/>（特性の<wbr/>ある<wbr/>子との<wbr/>暮らし）、<wbr/>note発信、<wbr/>サロンや<wbr/>お店の<wbr/>発信、<wbr/>フラ、<wbr/>旅や<wbr/>体験。<wbr/>気に<wbr/>なる<wbr/>分野が<wbr/>たくさん<wbr/>あります。<wbr/>AIの<wbr/>活用を<wbr/>もっと<wbr/>磨き、<wbr/>学びを<wbr/>強めて、<wbr/>実践での<wbr/>使い方も<wbr/>知りたいです。</p>
+<p class="want">これから、<wbr/>ハワイアンアクセサリーの<wbr/>販売サイトづくりに<wbr/>挑戦します。<wbr/>ネットで<wbr/>売る、<wbr/>情報発信を<wbr/>収益に<wbr/>する。<wbr/>いろいろな<wbr/>方の<wbr/>いろいろなやり方を、ぜひ聞かせてください。</p>
+<a class="selfbtn" href="https://sasamina-code.github.io/self-intro/">自己紹介サイトを<wbr/>見る<wbr/> →</a>
 </section>
-
-<section class="grp b" aria-labelledby="g2">
-  <div class="gh"><img class="gic" src="images/cat-salon.webp" width="300" height="300" alt=""><div><div class="eyebrow">FOR SALON ＆ SHOP</div>
-    <h2 id="g2">サロン・お店のためにつくったもの</h2></div></div>
-  <p class="gd">サロンやお店の「伝えたい」を、形にしました。</p>
-  <div class="tiles">
-    <a class="tile" href="mimitsubo/">
-      <div class="th" aria-hidden="true"><span class="tt">耳つぼ<br>カード</span></div>
-      <div><h3>耳つぼカードツール</h3><p>女性美容サロン向け。施術後のカードをLINEで即送信。</p></div>
-      <span class="ar" aria-hidden="true">›</span>
-    </a>
-    <a class="tile" href="leaflet/">
-      <div class="th"><img src="images/leaflet-1.webp" width="1600" height="1131" loading="lazy" alt="" style="object-position:92% 30%"></div>
-      <div><h3>サロンの三つ折りリーフレット</h3><p>Canvaとつないで、話しながら仕上げた制作実績。</p></div>
-      <span class="ar" aria-hidden="true">›</span>
-    </a>
-    <a class="tile" href="guide/">
-      <div class="th"><img src="yugawara/img/sky.jpg" width="1200" height="1600" loading="lazy" alt=""></div>
-      <div><h3>お店・施設の体験レポート</h3><p>実際に行って、写真と言葉で魅力を伝えます。制作例：湯河原。</p></div>
-      <span class="ar" aria-hidden="true">›</span>
-    </a>
-  </div>
+<p class="intro">AIが<wbr/>いれば、<wbr/>アプリも、<wbr/>文章も、<wbr/>デザインも。<br/>ひとりの<wbr/>暮らしから<wbr/>これだけの<wbr/>形が<wbr/>生まれています</p>
+<section aria-labelledby="g1" class="grp a">
+<div class="gh"><img alt="" class="gic" height="300" src="images/cat-family.webp" width="300"/><div><div class="eyebrow">FAMILY</div>
+<h2 id="g1">暮らし・子育てから<wbr/>生まれた<wbr/>ツール</h2></div></div>
+<p class="gd">毎日の<wbr/>子育ての<wbr/>「困った」から、<wbr/>つくりはじめました。</p>
+<a class="mainbanner" href="kosodate/">
+<div>
+<span class="tag">まず<wbr/>見てほしい</span>
+<h2>子育て<wbr/>レポート<wbr/>「今日の<wbr/>坊と<wbr/>嬢」</h2>
+<p>特性の<wbr/>ある<wbr/>兄と、<wbr/>定型発達の<wbr/>妹。<wbr/>二人の<wbr/>違いが<wbr/>見える<wbr/>記録を、<wbr/>夫や<wbr/>祖父母、<wbr/>学校面談や<wbr/>医師への<wbr/>相談の<wbr/>場にも<wbr/>届けられます。</p>
+</div>
+<span aria-hidden="true" class="go">→</span>
+</a>
+<div aria-hidden="true" class="next">↓ 発展</div>
+<div class="tiles">
+<a class="tile" href="https://graduation-diagram-topaz.vercel.app/">
+<div aria-hidden="true" class="th"><span class="tt">言葉の<br/>工房</span></div>
+<div><h3>言葉の<wbr/>工房</h3><p>note発信支援ツール<wbr/>（卒業制作）。<wbr/>子育て<wbr/>レポートツールの<wbr/>発展形です。</p></div>
+<span aria-hidden="true" class="ar">↗</span>
+</a>
+</div>
 </section>
-
-<section class="grp c" aria-labelledby="g3">
-  <div class="gh"><img class="gic" src="images/cat-fun.webp" width="300" height="300" alt=""><div><div class="eyebrow">FOR FUN</div>
-    <h2 id="g3">好きなことから</h2></div></div>
-  <p class="gd">フラや日々の楽しみも、AIで形にしています。</p>
-  <div class="tiles">
-    <a class="tile" href="https://hula-minako.surge.sh/">
-      <div class="th" aria-hidden="true"><span class="tt">フラ<br>ツアー</span></div>
-      <div><h3>フラ学習サポートアプリ</h3><p>歌詞・ストーリー・振りを整理するアプリの紹介ツアー。</p></div>
-      <span class="ar" aria-hidden="true">↗</span>
-    </a>
-    <a class="tile" href="https://line.me/S/sticker/37183272" target="_blank" rel="noopener">
-      <div class="th" aria-hidden="true"><span class="tt">LINE<br>スタンプ</span></div>
-      <div><h3>LINEスタンプ</h3><p>公開中。第2弾・第3弾は審査中です。</p></div>
-      <span class="ar" aria-hidden="true">↗</span>
-    </a>
-  </div>
+<section aria-labelledby="g2" class="grp b">
+<div class="gh"><img alt="" class="gic" height="300" src="images/cat-salon.webp" width="300"/><div><div class="eyebrow">FOR SALON ＆ SHOP</div>
+<h2 id="g2">サロン・<wbr/>お店の<wbr/>ために<wbr/>つくった<wbr/>もの</h2></div></div>
+<p class="gd">サロンや<wbr/>お店の<wbr/>「伝えたい」を、<wbr/>形に<wbr/>しました。</p>
+<div class="tiles">
+<a class="tile" href="mimitsubo/">
+<div aria-hidden="true" class="th"><span class="tt">耳つぼ<br/>カード</span></div>
+<div><h3>耳つぼカードツール</h3><p>女性美容サロン向け。<wbr/>施術後の<wbr/>カードを<wbr/>LINEで<wbr/>即送信。</p></div>
+<span aria-hidden="true" class="ar">›</span>
+</a>
+<a class="tile" href="leaflet/">
+<div class="th"><img alt="" height="1131" loading="lazy" src="images/leaflet-1.webp" style="object-position:92% 30%" width="1600"/></div>
+<div><h3>サロンの<wbr/>三つ<wbr/>折りリーフレット</h3><p>Canvaと<wbr/>つないで、<wbr/>話しながら仕上げた<wbr/>制作実績。</p></div>
+<span aria-hidden="true" class="ar">›</span>
+</a>
+<a class="tile" href="guide/">
+<div class="th"><img alt="" height="1600" loading="lazy" src="yugawara/img/sky.jpg" width="1200"/></div>
+<div><h3>お店・施設の<wbr/>体験レポート</h3><p>実際に<wbr/>行って、<wbr/>写真と<wbr/>言葉で<wbr/>魅力を<wbr/>伝えます。<wbr/>制作例：湯河原。</p></div>
+<span aria-hidden="true" class="ar">›</span>
+</a>
+</div>
 </section>
-
-<section class="connect" aria-labelledby="cn">
-  <h2 id="cn">どこかで、つながれたらうれしいです</h2>
-  <p>子育て（特性のある子との暮らし）、note発信、サロンやお店の発信、フラ、旅や体験。気になる分野がたくさんあって、これから学びながら、成長して広げていきたいと思っています。つながれそうだなと思ったら、ぜひ声をかけてください。</p>
+<section aria-labelledby="g3" class="grp c">
+<div class="gh"><img alt="" class="gic" height="300" src="images/cat-fun.webp" width="300"/><div><div class="eyebrow">FOR FUN</div>
+<h2 id="g3">好きな<wbr/>ことから</h2></div></div>
+<p class="gd">フラや<wbr/>日々の<wbr/>楽しみも、<wbr/>AIで<wbr/>形に<wbr/>しています。</p>
+<div class="tiles">
+<a class="tile" href="https://hula-minako.surge.sh/">
+<div aria-hidden="true" class="th"><span class="tt">フラ<br/>ツアー</span></div>
+<div><h3>フラ学習サポートアプリ</h3><p>歌詞・ストーリー・<wbr/>振りを<wbr/>整理する<wbr/>アプリの<wbr/>紹介ツアー。</p></div>
+<span aria-hidden="true" class="ar">↗</span>
+</a>
+<a class="tile" href="https://line.me/S/sticker/37183272" rel="noopener" target="_blank">
+<div aria-hidden="true" class="th"><span class="tt">LINE<br/>スタンプ</span></div>
+<div><h3>LINEスタンプ</h3><p>公開中。<wbr/>第2弾・第3弾は<wbr/>審査中です。</p></div>
+<span aria-hidden="true" class="ar">↗</span>
+</a>
+</div>
 </section>
-
 <footer>
-  <p>このページは、ADS卒業パーティーの参加者向けに作成したページです。</p>
-  <p>© Minako Sasaki ／ Aloha Code</p>
+<p>この<wbr/>ページは、<wbr/>ADS卒業パーティーの<wbr/>参加者向けに<wbr/>作成した<wbr/>ページです。</p>
+<p>© Minako Sasaki ／ Aloha Code</p>
 </footer>
-
 </main>
 </body>
 </html>
