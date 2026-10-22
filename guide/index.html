@@ -25,11 +25,11 @@ img{display:block;width:100%;height:auto}
 .wrap{max-width:640px;margin:0 auto;padding:0 16px}
 h1,h2,h3{font-family:"Shippori Mincho B1",serif;font-weight:700;line-height:1.5;margin:0}
 .cover{position:relative;color:var(--on-photo);background:#222}
-.cover img{aspect-ratio:4/5;object-fit:cover;filter:brightness(.62)}
+.cover img{aspect-ratio:auto;height:380px;object-fit:cover;object-position:50% 60%;filter:brightness(.62)}
 .cover .t{position:absolute;inset:auto 0 0 0;padding:0 16px 36px;max-width:640px;margin:0 auto;left:0;right:0}
 .eyebrow{font-size:.75rem;letter-spacing:.3em;color:var(--brass);font-weight:700}
 .cover .eyebrow{color:#e6d3a3}
-.cover h1{font-size:1.75rem;margin:8px 0 12px}
+.cover h1{font-size:1.5rem;margin:8px 0 10px}
 .cover p{margin:0;font-size:.95rem}
 section{padding:44px 0 8px}
 h2{font-size:1.375rem;margin:6px 0 14px}
@@ -69,7 +69,7 @@ footer .logo{width:84px;height:84px;object-fit:contain;padding:6px;margin:0 auto
   <img class="logo" src="img/logo.png" alt="Aloha Code のロゴ">
   <div class="t">
     <div class="eyebrow">EXPERIENCE REPORT</div>
-    <h1>「行ってみたい」が生まれる、<br>体験レポートをつくります</h1>
+    <h1 style="word-break:keep-all;overflow-wrap:break-word">「行ってみたい」が<wbr>生まれる、<br>体験レポートを<wbr>つくります</h1>
     <p>実際に訪れて、写真と言葉で伝える。<br>スマホでさらっと読める、品のあるWebレポート。</p>
   </div>
 </header>
@@ -86,7 +86,7 @@ footer .logo{width:84px;height:84px;object-fit:contain;padding:6px;margin:0 auto
 <section>
   <div class="eyebrow">SAMPLE</div>
   <h2>制作例</h2>
-  <figure style="margin:0 0 14px"><img src="img/window.jpg" alt="大きな窓いっぱいの森" style="border-radius:12px"></figure>
+  <figure style="margin:0 0 14px"><img src="img/window.jpg" alt="大きな窓いっぱいの森" style="border-radius:12px;aspect-ratio:16/9;object-fit:cover"></figure>
   <p>湯河原惣湯（Books and Retreat）の日帰り体験を、約5時間分まとめたレポートです。写真・動画・お品書き・料金や行き方の案内、公式サイトへの導線まで入っています。</p>
   <a class="btn" href="../yugawara/">制作例を見る<small>湯河原惣湯の体験レポートへ</small></a>
 </section>
